@@ -2,6 +2,7 @@ import React,{useState,useEffect} from 'react';
 import Clock from './Clock/Clock';
 import './App.css';
 import months from './data';
+import DigitalClock from './DigitalClock/DigitalClock';
 
 function App() {
   const [hourDigital, setHourDigital] = useState("");
@@ -47,20 +48,12 @@ function App() {
       </div>
 
       <div className='digitalClock'>
-        
-      <div className='dataTime'>
-        <span className='data0'>День:{dayNow} </span>
-        <span className='data1'>Месец:{monthNow} </span>
-        <span className='data2'>Год:{yearNow} </span>
+        <DigitalClock
+        hourDigital={hourDigital} secondDigital={secondDigital} minutesDigital={minutesDigital}
+        dayNow={dayNow} monthNow={monthNow} yearNow={yearNow}
+        />
       </div>
-      <div className='time'>
-        <span className='hour'>{hourDigital}</span>
-        <span className='min'>:{minutesDigital}</span>
-        <span className='seconds'>:{secondDigital}</span>
-        </div>
-        
-      
-      </div>
+
     </div>
   );
 }
