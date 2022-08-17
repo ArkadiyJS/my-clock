@@ -1,38 +1,75 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+*{
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+:root {
+  /* Цвета */
+  --hue-color: 240;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+  --first-color: hsl(var(--hue-color), 53%, 49%);
+  --text-color: hsl(var(--hue-color), 12%, 35%);
+  
+  --white-color: #fff;
+  --body-color: hsl(var(--hue-color), 24%, 94%);
+
+   /* Шрифт и типография  */
+  --body-font: "Poppins", sans-serif;
+  --biggest-font-size: 3rem;
+  --small-font-size: 0.813rem;
+  --smaller-font-size: 0.75rem;
+  --tiny-font-size: 0.625rem;
+
+  /* Размер шрифта */
+  --font-medium: 500;
+
+  /*Нижняя граница */
+  --mb-0-25: 0.25rem;
+  --mb-1: 1rem;
+  --mb-1-5: 1.5rem;
+  --mb-2-5: 2.5rem;
+
+  /* индекс z-шки*/
+  --z-normal: 1;
+  --z-tooltip: 10;
+}
+.App{
+   width: 1200px;
+   padding: 10px;
+   height: 100vh;
+   margin: 0 auto;
+   
+   
+   font-family: var(--body-font);
+   background-color: var(--body-color);
+   color: var(--text-color);
+  
+    
   }
-}
+  .Clock{
+    display: grid;
+    padding-bottom:20px ;
+  }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.digitalClock{
+  display: grid;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
   }
-  to {
-    transform: rotate(360deg);
+  
+.hour,
+.min,
+.seconds {
+  font-size:  60px;
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: 5px;
+ }
+.data1,
+.data2,
+.data0{
+  font-size:  20px;
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: 5px;
   }
-}
