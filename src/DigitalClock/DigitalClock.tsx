@@ -1,6 +1,14 @@
-import React from 'react';
 
-function DigitalClock({dayNow,monthNow,yearNow,hourDigital,minutesDigital,secondDigital}) {
+
+const DigitalClock =({dayNow,monthNow,yearNow,hourDigital,minutesDigital,secondDigital}:
+{
+  dayNow:number,
+  monthNow:string,
+  yearNow:number,
+  hourDigital:number,
+  minutesDigital:number,
+  secondDigital:number,
+})=> {
   return (
     <>
     <div className='dataTime'>
