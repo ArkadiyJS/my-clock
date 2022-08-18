@@ -1,4 +1,4 @@
-let months = [
+let months:string[] = [
     "Jan",
     "Feb",
     "Mar",

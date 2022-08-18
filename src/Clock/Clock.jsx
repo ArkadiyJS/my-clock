@@ -3,9 +3,9 @@ import "./Clock.css";
 
 
 function Clock() {
-  const [hour, setHour] = useState("");
-  const [minutes, setMinutes] = useState("");
-  const [seconds, setSeconds] = useState("");
+  const [hour, setHour]= useState(0);
+  const [minutes, setMinutes] = useState(0);
+  const [seconds, setSeconds] = useState(0);
   
 
   const clock = () => {

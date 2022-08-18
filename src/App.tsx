@@ -4,24 +4,25 @@ import './App.css';
 import months from './data';
 import DigitalClock from './DigitalClock/DigitalClock';
 
-function App() {
-  const [hourDigital, setHourDigital] = useState("");
-  const [secondDigital, setSecondDigital] = useState("");
-  const [minutesDigital, setMinutesDigital] = useState("");
-  const [dayNow, setDayNow] = useState("");
-  const [monthNow, setMonthNow] = useState("");
-  const [yearNow, setYearNow] = useState("");
+const App: React.FC = ()=> {
+
+  const [hourDigital, setHourDigital] = useState<number>(0);
+  const [secondDigital, setSecondDigital] = useState<number>(0);
+  const [minutesDigital, setMinutesDigital] = useState<number>(0);
+  const [dayNow, setDayNow] = useState<number>(0);
+  const [monthNow, setMonthNow] = useState<string>('');
+  const [yearNow, setYearNow] = useState<number>(0);
   
   useEffect(() => {
     setInterval(() => {
       let date = new Date();
 
-      let HH = date.getHours()
-      let MM = date.getMinutes()
-      let SS = date.getSeconds()
-      let day = date.getDate()
-      let month = date.getMonth()
-      let year = date.getFullYear()
+      let HH:number = date.getHours()
+      let MM:number = date.getMinutes()
+      let SS:number = date.getSeconds()
+      let day:number = date.getDate()
+      let month:number | Array<string> = date.getMonth()
+      let year:number = date.getFullYear()
         
       setSecondDigital(SS);
       setHourDigital(HH);
@@ -32,7 +33,7 @@ function App() {
     }, 1000);
   }, []);
 
-
+ 
 
 
 
