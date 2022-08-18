@@ -15,7 +15,7 @@ const App: React.FC = ()=> {
   
   useEffect(() => {
     setInterval(() => {
-      let date = new Date();
+      let date:Date = new Date();
 
       let HH:number = date.getHours()
       let MM:number = date.getMinutes()

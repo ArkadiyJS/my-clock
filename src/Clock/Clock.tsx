@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import "./Clock.css";
 
 
@@ -9,7 +9,7 @@ function Clock() {
   
 
   const clock = () => {
-    let date = new Date();
+    let date:Date = new Date();
 
     let hh:number = date.getHours() * 30,
       mm:number = date.getMinutes() * 6,
